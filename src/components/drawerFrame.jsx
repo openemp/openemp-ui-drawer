@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
-import { createNanoEvents } from 'nanoevents';
+import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Drawer, makeStyles, Typography } from '@openemp-mf/styleguide';
-import NestedList from 'components/nestedList';
-
-// Global object to emit UI events between microfrontends
-// window.emitter = createNanoEvents();
+import { Drawer, makeStyles } from '@openemp-mf/styleguide';
 
 const drawerWidth = 240;
 
@@ -32,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing(7) + 1,
+    width: theme.spacing(9),
   },
   toolbar: {
     display: 'flex',
@@ -46,18 +42,15 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  nested: {
-    paddingLeft: theme.spacing(4),
-  },
 }));
 
-export default function () {
+export default function DrawerContainer(props) {
+  const { children } = props;
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   useEffect(() => {
     const unbind = window.emitter.on('toggleDrawer', () => {
-      console.log('toggleDrawer');
       setOpen(!open);
     });
     return unbind;
@@ -79,7 +72,8 @@ export default function () {
         }}
       >
         <div className={classes.toolbar} />
-        <NestedList />
+        <div className={classes.toolbar} />
+        {children}
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
@@ -88,3 +82,7 @@ export default function () {
     </div>
   );
 }
+
+DrawerContainer.propTypes = {
+  children: PropTypes.element.isRequired,
+};

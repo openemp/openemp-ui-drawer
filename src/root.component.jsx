@@ -1,15 +1,14 @@
 import React from 'react';
-import { createMemorySource, createHistory, LocationProvider } from '@reach/router';
-import { DisplayGreeting } from 'features';
 
-const history = createHistory(window);
+import { DrawerFrame, NestedList } from 'components';
+
+import { links } from './root.helper';
 
 const Root = () => {
   return (
-    // <LocationProvider history={history}>
-    <LocationProvider history={history}>
-      <DisplayGreeting />;
-    </LocationProvider>
+    <DrawerFrame>
+      <NestedList linksList={links} />
+    </DrawerFrame>
   );
 };
 

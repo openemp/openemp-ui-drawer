@@ -1,2 +1,2 @@
 /* eslint-disable import/prefer-default-export */
-export { default as DisplayGreeting } from './displayGreeting';
+export { default as CollapseItem } from './collapseItem';

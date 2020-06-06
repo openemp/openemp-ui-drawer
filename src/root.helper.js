@@ -7,11 +7,17 @@ export const links = [
     submenu: [
       {
         name: 'Sub test 1',
-        href: '/template/subtest-1',
+        href: '/subtest-1',
       },
       {
         name: 'Sub test 2',
-        href: '/template/subtest-2',
+        href: '/subtest-2',
+        submenu: [
+          {
+            name: 'Sub sub test ',
+            href: '/1',
+          },
+        ],
       },
     ],
   },
@@ -21,15 +27,15 @@ export const links = [
   },
   {
     name: 'Test 3',
-    href: '/test-3',
+    href: '/test',
     submenu: [
       {
         name: 'Sub test 1',
-        href: '/test-3/subtest-1',
+        href: '/test/subtest',
         submenu: [
           {
             name: 'Sub sub test ',
-            href: '/test-3/subtest-1/subtest',
+            href: '/test/subtest/1',
           },
         ],
       },

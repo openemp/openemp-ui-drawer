@@ -9,9 +9,6 @@ require('dotenv').config();
 
 const { env } = process;
 
-console.log('-----------', new DotenvWebpackPlugin());
-console.log('-----------', new DefinePlugin({ 'process.env.ORG_NAME': '"openemp-mf"' }));
-
 module.exports = (webpackConfigEnv = {}) => {
   const opts = {
     orgName: env.ORG_NAME,
@@ -65,7 +62,7 @@ module.exports = (webpackConfigEnv = {}) => {
       disableHostCheck: true,
       port: opts.port,
     },
-    externals: ['react', 'react-dom', 'react-router-dom', 'single-spa', new RegExp(`^@${opts.orgName}/`)],
+    externals: ['react', 'react-dom', '@reach/router', 'single-spa', new RegExp(`^@${opts.orgName}/`)],
     plugins: [
       new DotenvWebpackPlugin(),
       new CleanWebpackPlugin(),
