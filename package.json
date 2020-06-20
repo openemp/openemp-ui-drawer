@@ -1,10 +1,10 @@
 {
   "name": "@openemp-mf/drawer",
-  "repository": "git@github.com:openemp/openemp-ui-template.git",
+  "repository": "git@github.com:openemp/openemp-ui-drawer.git",
   "author": "OpenEMP",
   "license": "MIT",
-  "version": "1.0.0",
-  "description": "OpenEMP UI Dasboard MF",
+  "version": "0.0.1-latest",
+  "description": "OpenEMP UI Drawer MF",
   "scripts": {
     "lint": "eslint src",
     "start": "webpack-dev-server",
@@ -16,8 +16,6 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@material-ui/core": "^4.10.0",
-    "@material-ui/icons": "^4.9.1",
     "@openemp-mf/styleguide": "github:honohunter/openemp-ui-styleguide#alpha",
     "@reach/router": "1.3.3",
     "clsx": "^1.1.0",

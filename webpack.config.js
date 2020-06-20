@@ -83,7 +83,7 @@ module.exports = (webpackConfigEnv = {}) => {
         assets: path.resolve(__dirname, 'src/assets'),
         components: path.resolve(__dirname, 'src/components'),
         features: path.resolve(__dirname, 'src/features'),
-        helpers: path.resolve(__dirname, 'src/features'),
+        helpers: path.resolve(__dirname, 'src/helpers'),
         reducer: path.resolve(__dirname, 'src/reducer'),
       },
     },
