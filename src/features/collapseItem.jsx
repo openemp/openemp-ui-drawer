@@ -14,7 +14,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   nested: (props) => ({
-    paddingRight: theme.spacing(props.level ? 4 + props.level : 3),
+    [theme.direction === 'rtl' ? 'paddingRight' : 'paddingLeft']: theme.spacing(props.level ? 4 + props.level : 3),
   }),
 }));
 
