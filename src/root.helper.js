@@ -42,5 +42,3 @@ export const links = [
     ],
   },
 ];
-
-// console.log('-------', System.import('@openemp-mf/template'));

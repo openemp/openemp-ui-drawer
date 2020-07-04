@@ -14,7 +14,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   nested: (props) => ({
-    paddingLeft: theme.spacing(props.level ? 4 + props.level : 3),
+    [theme.direction === 'rtl' ? 'paddingRight' : 'paddingLeft']: theme.spacing(props.level ? 4 + props.level : 3),
   }),
 }));
 
@@ -26,6 +26,7 @@ export default function CollapseItem(props) {
   // const navigate = useNavigate();
 
   const handleNavigation = () => {
+    // check token b4 send navigation cmd
     navigate(href);
   };
 
