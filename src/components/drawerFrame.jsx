@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Drawer, makeStyles } from '@openemp-mf/styleguide';
+import { Drawer, makeStyles } from '@openemp/styleguide';
 
 const drawerWidth = 240;
 
