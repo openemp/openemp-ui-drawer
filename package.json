@@ -1,9 +1,9 @@
 {
-  "name": "@openemp-mf/drawer",
+  "name": "@openemp/drawer",
   "repository": "git@github.com:openemp/openemp-ui-drawer.git",
   "author": "OpenEMP",
   "license": "MIT",
-  "version": "0.0.1-latest",
+  "version": "0.0.1",
   "description": "OpenEMP UI Drawer MF",
   "scripts": {
     "lint": "eslint src",
@@ -16,7 +16,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@openemp-mf/styleguide": "file:../openemp-ui-styleguide",
+    "@openemp/styleguide": "^0.0.2",
     "@reach/router": "1.3.3",
     "clsx": "^1.1.0",
     "nanoevents": "^5.1.7",

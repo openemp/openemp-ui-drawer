@@ -10,7 +10,7 @@ import {
   Collapse,
   List,
   makeStyles,
-} from '@openemp-mf/styleguide';
+} from '@openemp/styleguide';
 
 const useStyles = makeStyles((theme) => ({
   nested: (props) => ({
